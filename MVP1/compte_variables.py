@@ -3,10 +3,6 @@ def countVariables(filePath):
         fileList=list(file)
         nombreDeVariables=0
         for i in range (len(fileList)):
-            nombreDeVariables=nombreDeVariables+list(fileList[i]).count(' = ')
-    return N
-    
-
-
-
-print(countVariables("EventCandidatA.rb"))
+            nombreDeVariables=nombreDeVariables+list(fileList[i]).count('=')
+    return nombreDeVariables
+  
