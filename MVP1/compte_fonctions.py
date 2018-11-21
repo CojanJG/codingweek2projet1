@@ -1,5 +1,5 @@
+import enchant
 def compte_fonctions(path):
-	import enchant
 	d = enchant.Dict('en_US')
 	i=0
 	l=[]
@@ -33,8 +33,9 @@ def compte_fonctions(path):
 			n=n+1
 		else:
 			m=m+1
-	print ('nombre de fonctions:',i)
-	print (l)
-	print ('nombre de fonctions mal nommées:',n)
-	print ('nombre de fonctions bien nommées:',m)
-compte_fonctions('code_candidat1.txt')
+	return [i,l,n,m]
+
+print('nombre de fonctions:', compte_fonctions('code_candidat1.txt')[0])
+print('nom des fonctions:', compte_fonctions('code_candidat1.txt')[1])
+print('nombre de fonctions mal nommées:', compte_fonctions('code_candidat1.txt')[2])
+print('nombre de fonctions bien nommées:', compte_fonctions('code_candidat1.txt')[3])
