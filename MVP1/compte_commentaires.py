@@ -7,10 +7,15 @@ def compte_commentaires(path):
         number_commentaires=0
         number_commentaires_caracteres=0
         for ligne in code_list:
-            for k in range(len(ligne)):
-                if ligne[k]=="#":
-                    number_commentaires+=1
-                    number_commentaires_caracteres=number_commentaires_caracteres+len(ligne)-k
+            if len(ligne)>=2:
+                for k in range(len(ligne)-1):
+                    if ligne[k]=="#" and ligne[k+1]!="#":
+                        number_commentaires+=1
+                        number_commentaires_caracteres=number_commentaires_caracteres+len(ligne)-k-1
         return number_commentaires,number_commentaires_caracteres
 
+# print(compte_commentaires("code_candidat1_tests.txt"))
 # print(compte_commentaires("Code_candidat1.txt"))
+# print(compte_commentaires("test.txt"))
+
+
