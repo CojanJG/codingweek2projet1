@@ -1,13 +1,41 @@
+import enchant
 def compte_fonctions(path):
-    i=0
-    with open(path,'r') as code:
-        code2=list(code)
-        for k in code2 :
-            if 'def' in k:
-                i=i+1
-    return(i)
+	d = enchant.Dict('en_US')
+	i=0
+	l=[]
+	n=0
+	m=0
+	with open(path,'r') as code:
+		code2=list(code)
+		for k in code2 :
+			a=0
+			b=0
+			if 'def' in k:
+				i=i+1
+				k_list=list(k)
+				def_list=list('def')
+				a=k_list.index('f')
+				if '(' in k:
+					b=k_list.index('(')
+					l.append(k[a+2:b])
+				else:
+					l.append(k[a+2:])
+	for j in range(len(l)):
+		l[j]=l[j].replace('self.','')
+		l[j]=l[j].replace('\n','')
+		l[j]=l[j].split('_')
+		Flag=True
+		for u in l[j]:
+			if not d.check(u):
+				#not an English Word
+				Flag=False
+		if Flag==False:
+			n=n+1
+		else:
+			m=m+1
+	return [i,l,n,m]
 
-# compte_fonctions('code_candidat.txt')
-
-
-### compte le nombre de lignes où on trouve au moins un "def", mais a priori ce ne devrait pas être gênant.
+print('nombre de fonctions:', compte_fonctions('code_candidat1.txt')[0])
+print('nom des fonctions:', compte_fonctions('code_candidat1.txt')[1])
+print('nombre de fonctions mal nommées:', compte_fonctions('code_candidat1.txt')[2])
+print('nombre de fonctions bien nommées:', compte_fonctions('code_candidat1.txt')[3])
