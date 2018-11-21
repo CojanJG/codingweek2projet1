@@ -15,7 +15,7 @@ def doublon(path):
                 if j!=-1:
                     result[j][1]+=1
                 else:
-                    result.append([code_list[i],1])
+                    result.append([code_list[i],2])
         return result,len(result)
 
 print (doublon("test.txt"))
