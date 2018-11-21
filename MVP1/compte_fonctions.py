@@ -1,10 +1,10 @@
 def compte_fonctions(path):
-	from nltk.corpus import wordnet
+	import enchant
+	d = enchant.Dict('en_US')
 	i=0
 	l=[]
 	n=0
 	m=0
-	a=0
 	with open(path,'r') as code:
 		code2=list(code)
 		for k in code2 :
@@ -24,18 +24,15 @@ def compte_fonctions(path):
 		l[j]=l[j].replace('self.','')
 		l[j]=l[j].replace('\n','')
 		l[j]=l[j].split('_')
-		print(l[j])
 		Flag=True
 		for u in l[j]:
-			if not wordnet.synsets(u):
-				#English Word
+			if not d.check(u):
+				#not an English Word
 				Flag=False
-				a=a+1
 		if Flag==False:
 			n=n+1
 		else:
 			m=m+1
-	print (a)
 	print ('nombre de fonctions:',i)
 	print (l)
 	print ('nombre de fonctions mal nommées:',n)
