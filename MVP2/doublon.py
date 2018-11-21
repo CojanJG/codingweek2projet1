@@ -32,4 +32,4 @@ def doublon(path):
                     result.append([code_list[i],2])
         return result
 
-print (doublon("event_candidate_b.rb"))
+
