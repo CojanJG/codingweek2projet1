@@ -21,12 +21,21 @@ def compte_fonctions(path):
 				else:
 					l.append(k[a+2:])
 	for j in range(len(l)):
-		if not wordnet.synsets(l[j]):
-			 #Not an English Word
+		l[j]=l[j].replace('self.','')
+		l[j]=l[j].replace('\n','')
+		l[j]=l[j].split('_')
+		print(l[j])
+		Flag=True
+		for u in l[j]:
+			if not wordnet.synsets(u):
+				#English Word
+				Flag=False
+				a=a+1
+		if Flag==False:
 			n=n+1
 		else:
-			#English Word
 			m=m+1
+	print (a)
 	print ('nombre de fonctions:',i)
 	print (l)
 	print ('nombre de fonctions mal nommées:',n)
