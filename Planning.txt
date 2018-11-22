@@ -1,0 +1,30 @@
+MVP 1
+
+Accéder au donnée du fichier ruby
+
+Compter des caractéristiques en sockant les noms des differentes fonctions, variables etc
+
+- Nombre de fonctions définies
+- Nombre de Variables
+- Nombre Test
+- Nombre de commentaires
+
+
+
+MVP 2 :
+
+- Duplication de code, redondance dans son code
+- Nom des variables : Il faut respecter les conventions
+- Nom des fonctions : Il faut respecter les conventions
+- Longueur des lignes : Nombre de caractères
+
+Utiliser text blob pour analyser les mots dans les noms de variables/fonctions
+
+MVP 3 :
+
+Trouver des critère de fraude et les appliquer.
+Comparer un document à une base de documents.
+
+- Fonction de comparaison de 2 listes 
+- Fonction de comparaison de 2 codes sur les critère : Noms de variables / Noms de fonctions / Lignes identiques
+- Fonction de comparaison d'un code à une base de données de codes qui renvoie les le code le plus "proche" selon les critères établis
