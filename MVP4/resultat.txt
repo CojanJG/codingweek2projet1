@@ -1,0 +1,14 @@
+
+ Résultat de la première analyse sommaire (MVP1)
+{'nombre de fonctions': 10, 'nombre de variables': 12, 'nombre de fonctions test': 14, 'nombre de tests': 23, 'nombre de commentaires': 0, 'nombre de caractères de commentaires': 0}
+
+ Résultat de la deuxième analyse (MVP2)
+{'Nombre de lignes de plus de 80 caractères': 10, 'Nombre de variables bien nommés': 17, 'Nombre de variables mal nommés': 1, 'Nombre de fonctions bien nommés': 8, 'Nombre de fonctions mal nommés': 2, 'Nombre de lignes en double': 69}
+
+ Résultat du test de fraude (MVP3)
+
+ Le code le plus proche du fichier inspecté est event_candidat_c_test.txt
+Ces codes ont : 
+ 104 Lignes identiques
+8 Variables de même nom
+2 Fonctions de même nom
