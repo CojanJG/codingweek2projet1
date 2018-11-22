@@ -1,17 +1,17 @@
 def suppression_espace_string(string):
-    list=list(string)
+    liste=list(string)
     m=0
-    while m<len(list) and list[m]==' ':
-        list.pop(0)
+    while m<len(liste) and liste[m]==' ':
+        liste.pop(0)
         #on supprime les espaces
         m+=1
-    for m in range(1,len(list)):
+    for m in range(1,len(liste)):
         #on repasse à un seul string en concatenant notre liste de string et le mot se retrouve en position 0
-        list[0]=list[0]+list[m]
-    while len(list)>1:
-        list.pop(-1)
-    if len(list)>0:
-        string=list[0]            #on passe d'une liste de string à un string : ["machin"] -> "machin"
+        liste[0]=liste[0]+liste[m]
+    while len(liste)>1:
+        liste.pop(-1)
+    if len(liste)>0:
+        string=liste[0]            #on passe d'une liste de string à un string : ["machin"] -> "machin"
     return string
 
 
