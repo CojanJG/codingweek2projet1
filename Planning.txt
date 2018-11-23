@@ -26,5 +26,6 @@ Trouver des critère de fraude et les appliquer.
 Comparer un document à une base de documents.
 
 - Fonction de comparaison de 2 listes 
+im
 - Fonction de comparaison de 2 codes sur les critère : Noms de variables / Noms de fonctions / Lignes identiques
 - Fonction de comparaison d'un code à une base de données de codes qui renvoie les le code le plus "proche" selon les critères établis
