@@ -27,3 +27,6 @@ resultat.write(str(fraude[0][0])+ ' Lignes identiques\n')
 resultat.write(str(fraude[0][1])+' Variables de même nom\n')
 resultat.write(str(fraude[0][2])+" Fonctions de même nom")
 
+resultat.close()
+resultat = open('resultat.txt',"r")
+print(resultat.read())

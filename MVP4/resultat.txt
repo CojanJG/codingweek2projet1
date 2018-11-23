@@ -9,6 +9,6 @@
 
  Le code le plus proche du fichier inspecté est event_candidat_c_test.txt
 Ces codes ont : 
- 104 Lignes identiques
+104 Lignes identiques
 8 Variables de même nom
 2 Fonctions de même nom
