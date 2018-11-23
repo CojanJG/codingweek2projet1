@@ -8,4 +8,4 @@ def testLignes(filePath,N):
                 nombreDeLignes=nombreDeLignes+1
     return(nombreDeLignes)
 
-print(testLignes('EventCandidatA.rb',80))
+# print(testLignes('EventCandidatA.rb',80))
